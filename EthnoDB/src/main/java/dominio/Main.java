@@ -2,6 +2,7 @@ package dominio;
 
 import java.sql.*;
 
+import dominio.GUI.VentanaInicio;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -18,12 +19,6 @@ public class Main {
     }
     public void main(String[] args) throws SQLException {
 
-        public static EntityManager getEntityManager(){
-            EntityManagerFactory factory = Persistence.createEntityManagerFactory("JPA_PU");
-            EntityManager manager = factory.createEntityManager();
-            return manager;
-        }
-        public static void main; ( String[] args ) {
 
             Menu menu = new Menu();
 
@@ -36,14 +31,6 @@ public class Main {
                 System.out.println(e.getMessage());
             }
 
-
-            EntityManager em = getEntityManager();
-            EntityTransaction tx = em.getTransaction();
-            tx.begin();
-            //ClienteModel cliente = new ClienteModel();
-            //ClientesView clientesView = new ClientesView();
-            //ClientesController clienteController = new ClientesController(cliente, clientesView); //← Seteamos todos los atributos em.persist(empleado);
-            tx.commit();
         }
 
         // * tomar input por consolapara el nombre
@@ -106,5 +93,3 @@ public class Main {
 */
     }
 
-
-}

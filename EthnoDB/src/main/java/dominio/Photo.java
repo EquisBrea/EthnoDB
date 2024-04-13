@@ -1,4 +1,5 @@
 package dominio;
 
-public class Photo extends dominio.files.File {
+public class Photo extends dominio.File {
+
 }

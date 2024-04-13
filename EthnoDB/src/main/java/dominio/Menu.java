@@ -19,20 +19,28 @@ public class Menu {
                 opciones,
                 opciones[0]
         );
+/*
         Crear crear = new Crear();
+*/
         // Verificar la eleccion del usuario
         switch (choice) {
             case 0:
+/*
                 crear.registrarIncidente();
+*/
                 break;
             case 1:
                 registrarNuevoCliente();
                 break;
             case 2:
+/*
                 crear.registrarNuevoTecnico();
+*/
                 break;
             case 3:
+/*
                 crear.registrarNuevaEspecialidad();
+*/
             case 4:
                 showMenu();
                 break;
@@ -140,28 +148,38 @@ public class Menu {
         int seleccion = teclado.nextInt();
         switch (seleccion) {
             case 1:
+/*
                 Crear.registrarIncidente();
+*/
                 break;
             case 2:
+/*
                 Eliminar.borrarCliente();
+*/
                 menuEliminarDatos();
                 break;
             case 3:
+/*
                 Eliminar.borrarTecnico();
+*/
                 menuEliminarDatos();
                 break;
             case 4:
+
+/*
                 Eliminar.borrarEspecialidad();
+*/
+
                 break;
             default:
                 System.out.println("La opción seleccionada no es válida");
         }
     }
 
-    private void borrarCliente(ClientesController cliente) throws Exception {
+ /*   private void borrarCliente(ClientesController cliente) throws Exception {
         cliente.eliminarCliente(cliente.model);
     }
-
+*/
     private void menuConsultas() throws Exception {
         String[] opciones = {"1- Listar clientes", "2- Buscar incidentes", "3- Eliminar tecnicos", "4- Desempeño tecnicos", "5- Salir"};
 
@@ -179,21 +197,27 @@ public class Menu {
         // Check the user's choice
         switch (choice) {
             case 0:
+/*
                 Listar.listarClientes();
+*/
                 menuConsultas();
                 break;
             case 1:
+/*
                 Listar.listarIncidentes();
+*/
                 menuConsultas();
                 break;
             case 2:
+/*
                 Listar.listarTecnicos();
+*/
                 menuConsultas();
                 break;
             case 3:
-                TecnicoModel tecnicazo = new TecnicoModel();
+/*                TecnicoModel tecnicazo = new TecnicoModel();
                 Consultas.tecnicoConMayorCantidadDeIncidentesResueltos();
-                JOptionPane.showMessageDialog(null, tecnicazo.getNombreTecnico());
+                JOptionPane.showMessageDialog(null, tecnicazo.getNombreTecnico());*/
                 menuConsultas();
             case 4:
                 showMenu();
@@ -253,9 +277,11 @@ public class Menu {
                 Scanner tecl = new Scanner(System.in);
                 System.out.println("Ingrese ID de Tecnico");
                 int busq = tecl.nextInt();
+/*
                 JpaTecnicoRepository repo1 = new JpaTecnicoRepository();
                 TecnicoModel tecni = repo1.obtenerTecnicoPorId(busq);
                 Consultas.listarIncidentesPorTecnico(tecni);
+*/
                 break;
             case 4:
                 menuConsultas();

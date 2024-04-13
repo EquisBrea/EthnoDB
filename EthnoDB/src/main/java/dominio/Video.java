@@ -1,5 +1,6 @@
 package dominio;
 
-public class Video extends dominio.files.File {
+
+public class Video extends dominio.File {
 
 }
