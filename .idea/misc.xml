@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager">
+  <component name="ProjectResources">
+    <resource url="http://xmlns.jcp.org/xml/ns/persistence" location="$PROJECT_DIR$" />
+    <resource url="http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd" location="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="21" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

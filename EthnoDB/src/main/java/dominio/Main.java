@@ -1,25 +1,56 @@
 package dominio;
 
-import com.mysql.cj.protocol.Resultset;
-import dominio.actors.Collaborator;
-import dominio.actors.Community;
-
-import javax.swing.plaf.nimbus.State;
 import java.sql.*;
-import java.util.Scanner;
-import java.util.Set;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+
+import javax.swing.*;
+
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
-    public static void main(String[] args) throws SQLException {
+    public static EntityManager getEntityManager(){
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("JPA_PU");
+        return factory.createEntityManager();
+    }
+    public void main(String[] args) throws SQLException {
 
+        public static EntityManager getEntityManager(){
+            EntityManagerFactory factory = Persistence.createEntityManagerFactory("JPA_PU");
+            EntityManager manager = factory.createEntityManager();
+            return manager;
+        }
+        public static void main; ( String[] args ) {
+
+            Menu menu = new Menu();
+
+            SwingUtilities.invokeLater(() ->
+                    new VentanaInicio());
+
+            try {
+                // menu.showMenu();
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+            }
+
+
+            EntityManager em = getEntityManager();
+            EntityTransaction tx = em.getTransaction();
+            tx.begin();
+            //ClienteModel cliente = new ClienteModel();
+            //ClientesView clientesView = new ClientesView();
+            //ClientesController clienteController = new ClientesController(cliente, clientesView); //← Seteamos todos los atributos em.persist(empleado);
+            tx.commit();
+        }
 
         // * tomar input por consolapara el nombre
         //Scanner scn = new Scanner(System.in);
         //String inputName1 = scn.nextLine();
 
-
+        /*
         //conexión con la DB
         Connection connection = null;
         connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ethnoDBtest1","root", "Gas71985");
